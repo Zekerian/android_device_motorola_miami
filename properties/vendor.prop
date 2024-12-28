@@ -1,39 +1,32 @@
 # Audio
-persist.vendor.audio.calfile0=/vendor/etc/acdbdata/adsp_avs_config.acdb
-persist.vendor.audio.calfile1=/vendor/etc/acdbdata/Bluetooth_cal.acdb
-persist.vendor.audio.calfile2=/vendor/etc/acdbdata/General_cal.acdb
-persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Global_cal.acdb
-persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Handset_cal.acdb
-persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Hdmi_cal.acdb
-persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Headset_cal.acdb
-persist.vendor.audio.calfile7=/vendor/etc/acdbdata/Speaker_cal.acdb
+persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb
+persist.vendor.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb
+persist.vendor.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb
+persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb
+persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb
+persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb
+persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
 
 # Bluetooth
-bluetooth.device.default_name=moto g34 5G
+bluetooth.device.default_name=moto edge 30 neo
 
 # Camera
 persist.vendor.camera.physical.num=3
-
-# Display
-ro.vendor.display.svi=1
-vendor.display.svi.config=1
-ro.vendor.display.sensortype=2
-vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
 
 # Motorola
 ro.mot.build.customerid=global
 
 # NFC
 ro.nfc.port=I2C
-persist.vendor.nfc.config_secfile_name=libnfc-sec-nci.conf
 
 # Sensor
-ro.vendor.sensors.prox_for_call=true
+persist.vendor.sensors.mot_tap=true
+ro.vendor.sensors.mot_ltv=true
 
 # Surfaceflinger
-ro.surface_flinger.has_HDR_display=false
-ro.surface_flinger.has_wide_color_display=false
-ro.surface_flinger.set_idle_timer_ms=200
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.set_idle_timer_ms=500
 ro.surface_flinger.set_touch_timer_ms=1000
 ro.surface_flinger.use_smart_90_for_video=true
 vendor.hw.sf.IdleLazyResetThresholdT=1000

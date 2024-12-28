@@ -8,7 +8,7 @@
     <!-- Whether to show Smooth Display feature in Settings Options -->
     <bool name="config_show_smooth_display">true</bool>
 
-    <!-- Whether to show a preference item for regulatory information in About phone -->
-    <bool name="config_show_regulatory_info">true</bool>
+    <!-- The radius of the enrollment progress bar, in DP. -->
+    <integer name="config_udfpsEnrollProgressBar">75</integer>
 
 </resources>
