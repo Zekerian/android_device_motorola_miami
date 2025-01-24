@@ -65,7 +65,6 @@ vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/lib/libarcsoft_distortion_correction.so
 vendor/lib/libarcsoft_portrait_distortion_correction.so
 vendor/lib/libarcsoft_super_night_raw.so
-vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libmotoisdataqueue.so
 vendor/lib64/com.qti.settings.mannar.so
