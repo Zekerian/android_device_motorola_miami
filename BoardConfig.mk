@@ -23,19 +23,16 @@ include device/motorola/sm6375-common/BoardConfigCommon.mk
 TARGET_BOOTLOADER_BOARD_NAME := miami
 
 # Kernel
-TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_NO_KERNEL := false
-BOARD_KERNEL_BINARIES := kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)-kernel/dtb.img:$(TARGET_COPY_OUT)/dtb.img \
-    $(DEVICE_PATH)-kernel/kernel:kernel \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/ramdisk-modules/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/vendor-modules/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=miami
+TARGET_KERNEL_CONFIG := vendor/miami_defconfig
 
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+# Kernel Modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/configs/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
+BOARD_GENERIC_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules.load.recovery))
+RECOVERY_KERNEL_MODULES := $(BOARD_GENERIC_RAMDISK_KERNEL_MODULES_LOAD)
 
 # Partitions
 BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 5901385728 # ((SUPER_PARTITION_SIZE / 2) - 4194304)
