@@ -24,6 +24,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=miami_g \
-    BuildDesc="miami_g-user 14 U1UGS34.23-82-2-2 f80660 release-keys"
+    BuildDesc="miami_g-user 14 U1SSM34M.31-64-10 650ab0 release-keys"
 
-BUILD_FINGERPRINT := motorola/miami_g/miami:11/U1UGS34.23-82-2-2/f80660:user/release-keys
+BUILD_FINGERPRINT := motorola/miami_g/miami:14/U1SSM34M.31-64-10/650ab0:user/release-keys

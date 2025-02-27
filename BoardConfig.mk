@@ -50,7 +50,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/devic
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # Security Patch
-VENDOR_SECURITY_PATCH := 2024-08-01
+VENDOR_SECURITY_PATCH := 2025-01-01
 
 # inherit from the proprietary version
 include vendor/motorola/miami/BoardConfigVendor.mk
