@@ -24,7 +24,7 @@ TARGET_BOOTLOADER_BOARD_NAME := miami
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hab.product=miami
-TARGET_KERNEL_CONFIG := vendor/miami_defconfig
+TARGET_KERNEL_CONFIG += vendor/ext_config/moto-holi-miami.config
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules.load))
