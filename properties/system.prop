@@ -1,3 +1,10 @@
 # Google
 ro.opa.device_model_id=motorola-miami
 ro.opa.eligible_device=true
+
+# PRODUCT_SYSTEM_PROPERTIES
+ro.infinity.soc=Snapdragon 695 5G
+ro.infinity.battery=4020 mAh
+ro.infinity.display=1080x2400, 120 Hz
+ro.infinity.camera=64MP + 13MP + 32MP
+ro.product.marketname=Motorola Edge 30 Neo
