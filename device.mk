@@ -62,8 +62,15 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 # Virtual A/B
 TARGET_IS_VAB := true
+
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.miami
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 31
